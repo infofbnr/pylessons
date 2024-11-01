@@ -1,11 +1,11 @@
-/* Basic Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base Styles */
+/* Main Layout */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -17,72 +17,74 @@ body {
     padding: 20px;
 }
 
-/* Lesson List and Content */
-/* Lesson List Styling */
-#lesson-list {
-    list-style: none;
-    padding: 0;
+#main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#lesson-sidebar {
+    max-width: 200px;
+}
+
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.lesson-list {
+    list-style-type: none;
     background-color: #ffffff;
+    padding: 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
-#lesson-list li {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
+.lesson-list li {
+    padding: 10px;
     border-bottom: 1px solid #eaeaea;
-    transition: background-color 0.3s, transform 0.2s;
-    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#lesson-list li:last-child {
+.lesson-list li:last-child {
     border-bottom: none;
 }
 
-/* Icon next to each file name */
-#lesson-list li::before {
-    content: "📄"; /* File icon */
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-#lesson-list li:hover {
+.lesson-list li:hover {
     background-color: #f0f8ff;
-    transform: translateX(5px);
 }
 
-#lesson-list li a {
+.lesson-list li a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+}
+
+#lesson-content {
     flex-grow: 1;
-    transition: color 0.3s;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#lesson-list li a:hover {
-    color: #007bff;
+#lesson-title {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
-/* Code Block Styling */
-pre {
-    background-color: #f4f4f4;
-    color: #333;
-    font-size: 0.95rem;
-    padding: 15px;
-    line-height: 1.5;
-    border-radius: 5px;
-    overflow-x: auto;
-}
 
-/* Footer Contact Link */
+
+/* Footer Styling */
 h1 {
     font-size: 1.2rem;
-    color: #333;
     text-align: center;
     margin-top: auto;
     padding-top: 20px;
+    color: #333;
 }
 
 h1 a {
@@ -94,4 +96,42 @@ h1 a {
 h1 a:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+#exercises-sidebar {
+    max-width: 200px;
+}
+
+.exercises-list {
+    list-style-type: none;
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exercises-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.3s;
+}
+
+.exercises-list li:last-child {
+    border-bottom: none;
+}
+
+.exercises-list li:hover {
+    background-color: #f0f8ff;
+}
+
+.exercises-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#exercises-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

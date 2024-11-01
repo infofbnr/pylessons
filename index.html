@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Lessons</title>
+    <title>Python Lessons and Exercises</title>
     <link rel="stylesheet" href="assets/style.css">
-    <!-- Include Prism.js CSS for syntax highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
 </head>
 <body>
-    <ul id="lesson-list">
-        <!-- Lesson files will be dynamically populated here by script.js -->
-    </ul>
-    <div id="lesson-content">
-        <h2 id="lesson-title">Select a lesson to view its content</h2>
-        <!-- Add the `language-python` class for syntax highlighting -->
-        <pre id="lesson-text" class="language-python"></pre>
+    <div id="main-content">
+        <!-- Sidebar for Lesson List -->
+        <div id="lesson-sidebar">
+            <h2>Lessons</h2>
+            <ul id="lesson-list" class="lesson-list"></ul>
+        </div>
+
+        <!-- Lesson Content and Exercises -->
+        <div id="lesson-content">
+            <h2 id="lesson-title">Select a lesson to view its content</h2>
+            <pre id="lesson-text" class="language-python"></pre>
+
+            <!-- Exercises Section Under Lesson Preview -->
+            <h3>Exercises</h3>
+            <ul id="exercise-list" class="exercises-list"></ul>
+
+            <!-- Exercise Question and Answer Display -->
+            <div id="exercise-display" style="display: none;">
+                <h3 id="exercise-title">Exercise</h3>
+                <pre id="exercise-question" class="language-python"></pre>
+                <button id="show-answer" style="display: none;">Show Answer</button>
+                <pre id="exercise-answer" class="language-python" style="display: none;"></pre>
+            </div>
+        </div>
     </div>
+
     <h1>For any questions, please contact Mano by clicking <a href="https://wa.me/+96181243405/" target="_blank" title="Contact me through WhatsApp">here</a></h1>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
     <script src="assets/script.js"></script>

@@ -17,3 +17,5 @@ converters.kg_to_lbs(5)
 from converters import kg_to_lbs # type: ignore
 kg_to_lbs(5)
 
+if convertkgtolbs(5) > 5:
+    pass
