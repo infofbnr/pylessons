@@ -81,7 +81,7 @@ async function loadExercise(exerciseNumber) {
 
     // Load question content
     try {
-        const response = await fetch(`exercises/exercisesQ.txt`);
+        const response = await fetch(`Exercises/exercisesQ.txt`);
         if (!response.ok) throw new Error('Network response was not ok');
         const content = await response.text();
 
@@ -97,7 +97,7 @@ async function loadExercise(exerciseNumber) {
     // Show answer on button click
     showAnswerButton.onclick = async () => {
         try {
-            const response = await fetch(`exercises/exercisesA.txt`);
+            const response = await fetch(`Exercises/exercisesA.txt`);
             if (!response.ok) throw new Error('Network response was not ok');
             const answerContent = await response.text();
 
